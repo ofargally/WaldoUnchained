@@ -1,2 +1,5 @@
 # Waeldo
-Omar Fargally
+Omar Fargally and Jieni Wu
+Final Project 
+GAME DEVELOPMENT PROGRAMMING AND PRACTICE
+DIS
