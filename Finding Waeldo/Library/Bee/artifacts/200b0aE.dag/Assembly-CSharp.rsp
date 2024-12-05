@@ -408,6 +408,7 @@
 -analyzer:"/Applications/Unity/Hub/Editor/6000.0.18f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"/Applications/Unity/Hub/Editor/6000.0.18f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 -analyzer:"/Applications/Unity/Hub/Editor/6000.0.18f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll"
+"Assets/Scripts/enemyMove.cs"
 "Assets/Utilities/GameLogic3D/CharacterController/Scripts/CharacterMotor.cs"
 "Assets/Utilities/GameLogic3D/CharacterController/Scripts/FPSInputController.cs"
 "Assets/Utilities/GameLogic3D/CharacterController/Scripts/MouseLook.cs"
