@@ -6,7 +6,13 @@ public class BulletMovement : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
-            print("Hit enemy of name: " + other.gameObject.name);
+            Debug.Log("Hit enemy of name: " + other.gameObject.name);
+            EnemyManager enemyManager = other.gameObject.GetComponent<EnemyManager>();
+            if (enemyManager != null)
+            {
+                Debug.Log("Damage Dealt");
+                enemyManager.takeDamage();
+            }
             Destroy(gameObject);
         }
     }
