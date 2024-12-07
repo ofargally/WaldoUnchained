@@ -57,8 +57,8 @@ public class CharacterMotor : MonoBehaviour
 		public float maxAirAcceleration = 20.0f;
 
 		// The gravity for the character
-		public float gravity = 10.0f;
-		public float maxFallSpeed = 20.0f;
+		public float gravity = 30.0f;
+		public float maxFallSpeed = 60.0f;
 	
 		// For the next variables, [HideInInspector] tells Unity to not serialize the variable or show it in the inspector view.
 		// Very handy for organization!
@@ -102,10 +102,10 @@ public class CharacterMotor : MonoBehaviour
 		public bool enabled = true;
 
 		// How high do we jump when pressing jump and letting go immediately
-		public float baseHeight = 1.0f;
+		public float baseHeight = 2.0f;
 	
 		// We add extraHeight units (meters) on top when holding the button down longer while jumping
-		public float extraHeight = 4.1f;
+		public float extraHeight = 8.1f;
 	
 		// How much does the character jump out perpendicular to the surface on walkable surfaces?
 		// 0 means a fully vertical jump and 1 means fully perpendicular.

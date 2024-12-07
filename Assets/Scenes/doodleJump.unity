@@ -3512,6 +3512,66 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 3}
+      propertyPath: sensitivityX
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 3}
+      propertyPath: sensitivityY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 3}
+      propertyPath: jumping.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 3}
+      propertyPath: jumping.jumping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 3}
+      propertyPath: movement.gravity
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 3}
+      propertyPath: jumping.baseHeight
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 3}
+      propertyPath: jumping.extraHeight
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 3}
+      propertyPath: movement.maxFallSpeed
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 3}
+      propertyPath: movement.slopeSpeedMultiplier.m_Curve.Array.data[1].time
+      value: -26.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 3}
+      propertyPath: movement.slopeSpeedMultiplier.m_Curve.Array.data[2].time
+      value: 35.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 3}
+      propertyPath: movement.slopeSpeedMultiplier.m_Curve.Array.data[1].value
+      value: 1.0070773
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 3}
+      propertyPath: movement.slopeSpeedMultiplier.m_Curve.Array.data[2].value
+      value: 0.0047302246
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 3}
+      propertyPath: movement.slopeSpeedMultiplier.m_Curve.Array.data[1].inSlope
+      value: -0.0029648917
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 3}
+      propertyPath: movement.slopeSpeedMultiplier.m_Curve.Array.data[1].inWeight
+      value: 0.3043478
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 3}
+      propertyPath: movement.slopeSpeedMultiplier.m_Curve.Array.data[1].outSlope
+      value: -0.0029648917
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
