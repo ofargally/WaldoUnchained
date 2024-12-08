@@ -12,13 +12,13 @@ public class enemyMove : MonoBehaviour
     void Start()
     {
         movementSpeed /= 60f;
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (movedDistance > range || movedDistance < (0-range))
+        if (movedDistance > range || movedDistance < (0 - range))
         {
             movementSpeed = 0 - movementSpeed;
             movedDistance = 0;
