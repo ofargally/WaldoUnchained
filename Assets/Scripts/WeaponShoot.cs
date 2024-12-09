@@ -56,6 +56,11 @@ public class WeaponShoot : MonoBehaviour
 
     void Update()
     {
+        //If weapon mode is not activated, we return
+        if (!GlobalReferences.Instance.PlayerWeaponMode)
+        {
+            return;
+        }
         //Sound Handling
         if (currentShootingMode == ShootingMode.Auto)
         {
