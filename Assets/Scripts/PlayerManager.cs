@@ -7,6 +7,13 @@ public class PlayerManager : MonoBehaviour
     public int PlayerHP = 10;
 
     // Update is called once per frame
+
+    void Start()
+    {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+
+    }
     void Update()
     {
         if (PlayerHP <= 0)

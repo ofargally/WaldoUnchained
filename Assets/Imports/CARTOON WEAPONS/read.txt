@@ -1,0 +1,12 @@
+Fireaxe (Melee)
+Bat (Melee)
+Python (Revolver)
+Eagle (Pistol)
+Bizon (SMG)
+Mossberg (Shotgun)
+AK (Assau-.. Automatic Rifle)
+M4 (Automatic Rifle)
+SVD (Sniper Rifle)
+RPG (uh.. rocket launcher)
+Binocular (an ocular for each eye)
+Material included. Only using Principled BSDF (and glass for the binocular glass).

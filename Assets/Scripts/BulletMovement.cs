@@ -2,12 +2,17 @@ using UnityEngine;
 
 public class BulletMovement : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision other)
+    private void OnCollisionEnter(Collision ObjectHit)
     {
-        if (other.gameObject.CompareTag("Enemy"))
+        if (!ObjectHit.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Hit enemy of name: " + other.gameObject.name);
-            EnemyManager enemyManager = other.gameObject.GetComponent<EnemyManager>();
+            CreateBulletImpactEffect(ObjectHit);
+        }
+
+        if (ObjectHit.gameObject.CompareTag("Enemy"))
+        {
+            Debug.Log("Hit enemy of name: " + ObjectHit.gameObject.name);
+            EnemyManager enemyManager = ObjectHit.gameObject.GetComponent<EnemyManager>();
             if (enemyManager != null)
             {
                 Debug.Log("Damage Dealt");
@@ -15,5 +20,15 @@ public class BulletMovement : MonoBehaviour
             }
             Destroy(gameObject);
         }
+    }
+    void CreateBulletImpactEffect(Collision ObjectHit)
+    {
+        ContactPoint contact = ObjectHit.contacts[0];
+        GameObject hole = Instantiate(
+            GlobalReferences.Instance.bulletImpactEffectPrefab,
+            contact.point,
+            Quaternion.LookRotation(contact.normal)
+        );
+        hole.transform.SetParent(ObjectHit.gameObject.transform);
     }
 }

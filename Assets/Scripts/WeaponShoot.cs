@@ -1,10 +1,12 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.Animations;
+using System;
+using TMPro;
 public class WeaponShoot : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     // Update is called once per frame
-    public Camera playerCamera;
 
     //Shooting
     public bool isShooting, readyToShoot;
@@ -24,6 +26,15 @@ public class WeaponShoot : MonoBehaviour
     public float bulletSpeed = 30.0f;
     public float bulletLife = 3.0f;
 
+    public GameObject muzzleEffect;
+
+
+
+    // Loading Weapon
+    public float reloadTime;
+    public int magazineSize;
+    public int bulletsLeft;
+    public bool isReloading;
     // Shootingmode
     public enum ShootingMode
     {
@@ -32,16 +43,20 @@ public class WeaponShoot : MonoBehaviour
         Auto
     }
     public ShootingMode currentShootingMode;
+    public Animator animator;
 
     private void Awake()
     {
         readyToShoot = true;
         burstBulletsLeft = bulletsPerBurst;
+        animator = GetComponent<Animator>();
+        bulletsLeft = magazineSize;
     }
 
 
     void Update()
     {
+        //Sound Handling
         if (currentShootingMode == ShootingMode.Auto)
         {
             //Hold down mouse button to shoot
@@ -52,18 +67,49 @@ public class WeaponShoot : MonoBehaviour
             //Press mouse button to shoot
             isShooting = Input.GetKeyDown(KeyCode.Mouse0);
         }
-        if (readyToShoot && isShooting)
+
+        if (Input.GetKeyDown(KeyCode.R) && bulletsLeft < magazineSize && isReloading == false)
+        {
+            Reload();
+        }
+        if (readyToShoot && isShooting && !isReloading && bulletsLeft > 0)
         {
             burstBulletsLeft = bulletsPerBurst;
             Fire();
         }
+        if (bulletsLeft <= 0 && isShooting)
+        {
+            if (AudioManager.Instance.emptyMagazine != null)
+            {
+                AudioManager.Instance.emptyMagazine.Play();
+            }
+            readyToShoot = false;
+            if (!isReloading)
+            {
+                Reload();
+            }
+        }
+
+        // Update Bullets UI
+        if (GlobalReferences.Instance.AmmoDisplay != null)
+        {
+            GlobalReferences.Instance.AmmoDisplay.text = $"{bulletsLeft / bulletsPerBurst}/{magazineSize / bulletsPerBurst}";
+        }
     }
     private void Fire()
     {
+        if (isReloading) return;
+
+        bulletsLeft--;
+        muzzleEffect.GetComponent<ParticleSystem>().Play();
         // Can not shoot again before the first shot is done
         readyToShoot = false;
-
+        if (AudioManager.Instance.shootingSound != null)
+        {
+            AudioManager.Instance.shootingSound.Play();
+        }
         Vector3 shootingDirection = CalculateDirectionAndSpread().normalized;
+        animator.SetTrigger("RECOIL");
 
         GameObject bullet = Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
         bullet.transform.forward = shootingDirection;
@@ -85,6 +131,23 @@ public class WeaponShoot : MonoBehaviour
             Invoke("Fire", shootingDelay);
         }
     }
+    private void Reload()
+    {
+        if (AudioManager.Instance.reloadingSound != null)
+        {
+            AudioManager.Instance.reloadingSound.Play();
+        }
+        isReloading = true;
+        readyToShoot = false; // Prevent shooting during reload
+        Invoke("ReloadCompleted", reloadTime);
+    }
+
+    private void ReloadCompleted()
+    {
+        bulletsLeft = magazineSize;
+        isReloading = false;
+        readyToShoot = true; // Allow shooting after reload is completed
+    }
     private IEnumerator DestroyBulletAfterTime(GameObject bullet, float delay)
     {
         yield return new WaitForSeconds(delay);
@@ -93,7 +156,7 @@ public class WeaponShoot : MonoBehaviour
 
     public Vector3 CalculateDirectionAndSpread()
     {
-        Ray ray = playerCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+        Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
         RaycastHit hit;
         Vector3 targetPoint;
         if (Physics.Raycast(ray, out hit))
