@@ -29,6 +29,13 @@ public class PlayerManager : MonoBehaviour
         Debug.Log("PLAYER HP:" + PlayerHP);
     }
 
+    public void Die()
+    {
+        Debug.Log("PLAYER DEATH");
+        //Could add some effect here later, should also provide a rumbling sound for lava
+        RestartScene();
+    }
+
     private IEnumerator KnockbackCoroutine()
     {
         isKnockedBack = true;
