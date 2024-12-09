@@ -23,7 +23,10 @@ public class startText : MonoBehaviour
     {
 
         timeCounter += Time.deltaTime;
-
+        if(currentText == 2)
+        {
+            timeInterval = 1f;
+        }
         if (timeCounter > timeInterval && currentText < totalTexts)
         {
             texts[currentText].SetActive(false);
@@ -31,7 +34,7 @@ public class startText : MonoBehaviour
             timeCounter = 0f;
             if (currentText == totalTexts)
             {
-                SceneManager.LoadScene(1);
+                SceneManager.LoadScene(2);
             }
             else
             {
