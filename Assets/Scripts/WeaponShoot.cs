@@ -137,6 +137,7 @@ public class WeaponShoot : MonoBehaviour
         {
             AudioManager.Instance.reloadingSound.Play();
         }
+        animator.SetTrigger("RELOAD");
         isReloading = true;
         readyToShoot = false; // Prevent shooting during reload
         Invoke("ReloadCompleted", reloadTime);

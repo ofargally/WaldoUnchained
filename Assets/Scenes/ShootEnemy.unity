@@ -1112,9 +1112,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletImpactEffectPrefab: {fileID: 3849908138578976939, guid: 69402bba20d4e46b9a021a6567cb6a7e, type: 3}
   AmmoDisplay: {fileID: 1664276991}
-  shootingSound: {fileID: 8577711333836628501}
-  reloadingSound: {fileID: 8577711333836628501}
-  emptyMagazine: {fileID: 8577711333836628501}
 --- !u!1 &2116252465
 GameObject:
   m_ObjectHideFlags: 0
@@ -1231,7 +1228,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3351796189305407728, guid: 5f334d8f3331241b3b9920322bb61c9d, type: 3}
       propertyPath: reloadTime
-      value: 3
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 3351796189305407728, guid: 5f334d8f3331241b3b9920322bb61c9d, type: 3}
       propertyPath: magazineSize
@@ -1306,6 +1303,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2310831925277067017, guid: 5f334d8f3331241b3b9920322bb61c9d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8577711333836628502}
+    - targetCorrespondingSourceObject: {fileID: 2310831925277067017, guid: 5f334d8f3331241b3b9920322bb61c9d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8577711333836628508}
   m_SourcePrefab: {fileID: 100100000, guid: 5f334d8f3331241b3b9920322bb61c9d, type: 3}
 --- !u!1 &5936035329296065126 stripped
 GameObject:
@@ -1608,6 +1608,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8577711333836628508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5936035329296065126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cedea40b033f3482c8a619a5744e2e73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootingSound: {fileID: 8577711333836628501}
+  reloadingSound: {fileID: 8577711333836628502}
+  emptyMagazine: {fileID: 8577711333836628503}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
