@@ -20,11 +20,24 @@ public class ClickToMove : MonoBehaviour
         {
             Debug.Log("ClickToMove : Mouse Clicked");
             // Create Ray from Camera to Mouse Position
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity, NavMesh.AllAreas))
+            Camera cam = Camera.main;
+            if (cam == null)
             {
+                Debug.LogError("Main Camera not found. Ensure your camera is tagged as 'MainCamera'.");
+                return;
+            }
+            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+            int groundLayerMask = LayerMask.GetMask("Ground");
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity, groundLayerMask))
+            {
+                Debug.Log("ClickToMove : Raycast hit " + hit.collider.gameObject.name);
                 navAgent.SetDestination(hit.point);
+            }
+            else
+            {
+                Debug.Log("ClickToMove : Raycast did not hit anything.");
             }
         }
     }
