@@ -18,7 +18,7 @@ public class Bullet : MonoBehaviour
             GlobalReferences.Instance.playerManager.TakeDamage(1);
         }
 
-        if (other.gameObject.CompareTag("Enemy"))
+        if (other.gameObject.CompareTag("Enemy")||other.gameObject.CompareTag("WALDO"))
         {
             CreateBulletImpactEffect(other);
             Debug.Log("Hit enemy of name: " + other.gameObject.name);

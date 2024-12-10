@@ -8,5 +8,8 @@ public class restart : MonoBehaviour
     {
         SceneManager.LoadSceneAsync(0);
     }
-
+    public void LoadPlayScene()
+    {
+        SceneManager.LoadSceneAsync(2);
+    }
 }

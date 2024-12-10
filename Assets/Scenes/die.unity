@@ -383,7 +383,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 524892978}
         m_TargetAssemblyTypeName: restart, Assembly-CSharp
-        m_MethodName: LoadFirstScene
+        m_MethodName: LoadPlayScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

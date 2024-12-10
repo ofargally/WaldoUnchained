@@ -1,10 +1,11 @@
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class EnemyManager : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public int EnemyHP = 5;
+    public int EnemyHP;
     void Update()
     {
         if (EnemyHP <= 0)
@@ -30,15 +31,17 @@ public class EnemyManager : MonoBehaviour
             // Check if the game object has the "WALDO" tag
             if (gameObject.CompareTag("WALDO"))
             {
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
                 // Apply player win condition
-                GlobalReferences.Instance.playerManager.Win();
+                SceneManager.LoadSceneAsync(4);
                 Destroy(gameObject);
             }
             else
             {
                 // Destroy the game object after 5 seconds
 
-                Destroy(gameObject, 5f);
+                Destroy(gameObject, 2f);
             }
         }
     }
