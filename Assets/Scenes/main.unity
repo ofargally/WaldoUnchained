@@ -11307,7 +11307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfcae6af6813445798141cfe78491e88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyHP: 5
+  EnemyHP: 10
 --- !u!54 &493939032
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11351,8 +11351,8 @@ MonoBehaviour:
   player: {fileID: 0}
   agent: {fileID: 493939037}
   weaponScript: {fileID: 493939036}
-  viewDistance: 20
-  viewAngle: 90
+  viewDistance: 70
+  viewAngle: 210
   attackRange: 100
   loseSightDistance: 30
   timeBetweenChecks: 0.5
@@ -11471,10 +11471,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 6171026691610613778, guid: 196db8ca819a74306befbc970c011440, type: 3}
   bulletSpawn: {fileID: 706866334}
-  bulletSpeed: 30
+  bulletSpeed: 90
   bulletLife: 3
-  fireRate: 1
-  spreadIntensity: 0.1
+  fireRate: 9
+  spreadIntensity: 0.9
   muzzleEffect: {fileID: 1039602361}
   shootingSound: {fileID: 493939035}
 --- !u!195 &493939037
@@ -11487,7 +11487,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 8.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -11538,7 +11538,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.6
+  m_Radius: 0.75
   m_Height: 3.4
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -19671,11 +19671,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2742922616367832337, guid: 19d338234247a4851b0a837f0297b351, type: 3}
       propertyPath: riseSpeed
-      value: 0.5
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 2742922616367832337, guid: 19d338234247a4851b0a837f0297b351, type: 3}
       propertyPath: startDelay
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5467886695220951381, guid: 19d338234247a4851b0a837f0297b351, type: 3}
       propertyPath: m_Name
@@ -19999,7 +19999,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfcae6af6813445798141cfe78491e88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyHP: 5
+  EnemyHP: 10
 --- !u!54 &1201665456
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -20043,9 +20043,9 @@ MonoBehaviour:
   player: {fileID: 0}
   agent: {fileID: 1201665461}
   weaponScript: {fileID: 1201665460}
-  viewDistance: 20
-  viewAngle: 90
-  attackRange: 100
+  viewDistance: 60
+  viewAngle: 190
+  attackRange: 90
   loseSightDistance: 30
   timeBetweenChecks: 0.5
   patrolPoints:
@@ -20163,10 +20163,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 6171026691610613778, guid: 196db8ca819a74306befbc970c011440, type: 3}
   bulletSpawn: {fileID: 1597196118}
-  bulletSpeed: 30
+  bulletSpeed: 80
   bulletLife: 3
-  fireRate: 1
-  spreadIntensity: 0.1
+  fireRate: 8
+  spreadIntensity: 0.8
   muzzleEffect: {fileID: 1992673762}
   shootingSound: {fileID: 1201665459}
 --- !u!195 &1201665461
@@ -20179,7 +20179,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 7.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -20230,7 +20230,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.6
+  m_Radius: 0.75
   m_Height: 3.4
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -22604,7 +22604,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfcae6af6813445798141cfe78491e88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyHP: 5
+  EnemyHP: 10
 --- !u!54 &1784831852
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -22648,9 +22648,9 @@ MonoBehaviour:
   player: {fileID: 0}
   agent: {fileID: 1784831857}
   weaponScript: {fileID: 1784831856}
-  viewDistance: 20
-  viewAngle: 90
-  attackRange: 100
+  viewDistance: 80
+  viewAngle: 230
+  attackRange: 110
   loseSightDistance: 30
   timeBetweenChecks: 0.5
   patrolPoints:
@@ -22768,10 +22768,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 6171026691610613778, guid: 196db8ca819a74306befbc970c011440, type: 3}
   bulletSpawn: {fileID: 1374952451}
-  bulletSpeed: 30
+  bulletSpeed: 100
   bulletLife: 3
-  fireRate: 1
-  spreadIntensity: 0.1
+  fireRate: 10
+  spreadIntensity: 1
   muzzleEffect: {fileID: 18469279}
   shootingSound: {fileID: 1784831855}
 --- !u!195 &1784831857
@@ -22784,7 +22784,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 9.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -22835,7 +22835,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.6
+  m_Radius: 0.75
   m_Height: 3.4
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -34321,7 +34321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9578ed6113b5404c99d488093863333, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHP: 10
+  MaxHP: 50
   PlayerWeaponMode: 1
 --- !u!23 &302274854026349792
 MeshRenderer:
@@ -34729,7 +34729,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfcae6af6813445798141cfe78491e88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyHP: 5
+  EnemyHP: 10
 --- !u!4 &632171086926209595
 Transform:
   m_ObjectHideFlags: 0
@@ -35224,14 +35224,14 @@ MonoBehaviour:
   readyToShoot: 0
   shootingDelay: 0.1
   bulletsPerBurst: 1
-  spreadIntensity: 0.3
+  spreadIntensity: 0.1
   bulletPrefab: {fileID: 6171026691610613778, guid: 196db8ca819a74306befbc970c011440, type: 3}
   bulletSpawn: {fileID: 4757059587822846772}
-  bulletSpeed: 500
+  bulletSpeed: 600
   bulletLife: 3
   muzzleEffect: {fileID: 3135422532184435637}
   reloadTime: 2.5
-  magazineSize: 30
+  magazineSize: 60
   isReloading: 0
   currentShootingMode: 2
   animator: {fileID: 283911624295343050}
@@ -35463,7 +35463,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfcae6af6813445798141cfe78491e88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyHP: 5
+  EnemyHP: 10
 --- !u!4 &1607355134013911513
 Transform:
   m_ObjectHideFlags: 0
@@ -35606,9 +35606,9 @@ MonoBehaviour:
   player: {fileID: 0}
   agent: {fileID: 3587513013987378800}
   weaponScript: {fileID: 6717283180060556362}
-  viewDistance: 20
-  viewAngle: 90
-  attackRange: 100
+  viewDistance: 40
+  viewAngle: 150
+  attackRange: 70
   loseSightDistance: 30
   timeBetweenChecks: 0.5
   patrolPoints:
@@ -35759,10 +35759,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 6171026691610613778, guid: 196db8ca819a74306befbc970c011440, type: 3}
   bulletSpawn: {fileID: 7817898669697015112}
-  bulletSpeed: 30
+  bulletSpeed: 40
   bulletLife: 3
-  fireRate: 1
-  spreadIntensity: 0.1
+  fireRate: 2
+  spreadIntensity: 0.2
   muzzleEffect: {fileID: 7117673673282639675}
   shootingSound: {fileID: 8107247875581222989}
 --- !u!33 &1936533973177498327
@@ -36037,7 +36037,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfcae6af6813445798141cfe78491e88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyHP: 5
+  EnemyHP: 10
 --- !u!23 &2528346018746325062
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -41602,10 +41602,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 6171026691610613778, guid: 196db8ca819a74306befbc970c011440, type: 3}
   bulletSpawn: {fileID: 6571761126832734501}
-  bulletSpeed: 30
+  bulletSpeed: 70
   bulletLife: 3
-  fireRate: 1
-  spreadIntensity: 0.1
+  fireRate: 5
+  spreadIntensity: 0.5
   muzzleEffect: {fileID: 6163839065435491158}
   shootingSound: {fileID: 5174616710846823456}
 --- !u!33 &3283871681342629562
@@ -41785,7 +41785,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 5.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -42168,10 +42168,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 6171026691610613778, guid: 196db8ca819a74306befbc970c011440, type: 3}
   bulletSpawn: {fileID: 4707837493345444290}
-  bulletSpeed: 30
+  bulletSpeed: 50
   bulletLife: 3
-  fireRate: 1
-  spreadIntensity: 0.1
+  fireRate: 3
+  spreadIntensity: 0.3
   muzzleEffect: {fileID: 5759072942973365169}
   shootingSound: {fileID: 6749174932327619783}
 --- !u!33 &4006793415733763635
@@ -42349,7 +42349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfcae6af6813445798141cfe78491e88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyHP: 5
+  EnemyHP: 10
 --- !u!4 &4110507935198421235
 Transform:
   m_ObjectHideFlags: 0
@@ -42708,7 +42708,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 6.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -42901,7 +42901,7 @@ MonoBehaviour:
   weaponScript: {fileID: 514698792117381328}
   viewDistance: 10
   viewAngle: 90
-  attackRange: 20
+  attackRange: 40
   loseSightDistance: 30
   timeBetweenChecks: 0.5
   patrolPoints:
@@ -48655,10 +48655,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 6171026691610613778, guid: 196db8ca819a74306befbc970c011440, type: 3}
   bulletSpawn: {fileID: 1312785233}
-  bulletSpeed: 500
+  bulletSpeed: 100
   bulletLife: 3
   fireRate: 30
-  spreadIntensity: 0.1
+  spreadIntensity: 2
   muzzleEffect: {fileID: 192115845}
   shootingSound: {fileID: 5929423709121013813}
 --- !u!114 &5929423709121013815
@@ -48673,7 +48673,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfcae6af6813445798141cfe78491e88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyHP: 200
+  EnemyHP: 80
 --- !u!114 &5929423709121013816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48690,9 +48690,9 @@ MonoBehaviour:
   player: {fileID: 702670217556502159}
   agent: {fileID: 5929423709121013817}
   weaponScript: {fileID: 5929423709121013814}
-  viewDistance: 200
+  viewDistance: 100
   viewAngle: 360
-  attackRange: 200
+  attackRange: 150
   loseSightDistance: 100
   timeBetweenChecks: 0.1
   patrolPoints: []
@@ -48707,7 +48707,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 10.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -48731,7 +48731,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfcae6af6813445798141cfe78491e88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyHP: 5
+  EnemyHP: 10
 --- !u!4 &5970155105438032917
 Transform:
   m_ObjectHideFlags: 0
@@ -53944,7 +53944,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 4.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -53986,10 +53986,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 6171026691610613778, guid: 196db8ca819a74306befbc970c011440, type: 3}
   bulletSpawn: {fileID: 3103571720446057699}
-  bulletSpeed: 30
+  bulletSpeed: 60
   bulletLife: 3
-  fireRate: 1
-  spreadIntensity: 0.1
+  fireRate: 4
+  spreadIntensity: 0.4
   muzzleEffect: {fileID: 2714497519580206736}
   shootingSound: {fileID: 4030266052731970022}
 --- !u!136 &6717283180060556363
@@ -54011,7 +54011,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.6
+  m_Radius: 0.75
   m_Height: 3.4
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -54225,8 +54225,8 @@ MonoBehaviour:
   agent: {fileID: 8549436787769444315}
   weaponScript: {fileID: 1897227192687902177}
   viewDistance: 20
-  viewAngle: 90
-  attackRange: 100
+  viewAngle: 110
+  attackRange: 50
   loseSightDistance: 30
   timeBetweenChecks: 0.5
   patrolPoints:
@@ -59313,9 +59313,9 @@ MonoBehaviour:
   player: {fileID: 0}
   agent: {fileID: 4749300827128830902}
   weaponScript: {fileID: 3249657821540884876}
-  viewDistance: 20
-  viewAngle: 90
-  attackRange: 100
+  viewDistance: 50
+  viewAngle: 170
+  attackRange: 80
   loseSightDistance: 30
   timeBetweenChecks: 0.5
   patrolPoints:
@@ -59341,7 +59341,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.6
+  m_Radius: 0.75
   m_Height: 3.4
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -59457,7 +59457,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 2.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -59711,7 +59711,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.6
+  m_Radius: 0.75
   m_Height: 3.4
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -60050,9 +60050,9 @@ MonoBehaviour:
   player: {fileID: 0}
   agent: {fileID: 6597469287449066321}
   weaponScript: {fileID: 3998939453632233835}
-  viewDistance: 20
-  viewAngle: 90
-  attackRange: 100
+  viewDistance: 30
+  viewAngle: 130
+  attackRange: 60
   loseSightDistance: 30
   timeBetweenChecks: 0.5
   patrolPoints:
@@ -60078,7 +60078,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.6
+  m_Radius: 0.75
   m_Height: 3.4
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -60316,7 +60316,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.6
+  m_Radius: 0.75
   m_Height: 3.4
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}

@@ -3,13 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class startToIntro : MonoBehaviour
 {
-    // Update is called once per frame
-    void Update()
+    public void LoadIntroScene()
     {
-        if (Input.anyKeyDown)
-        {
-            SceneManager.LoadSceneAsync(1);
-        }
-
+        SceneManager.LoadSceneAsync(1);
     }
 }

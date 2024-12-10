@@ -309,6 +309,7 @@ GameObject:
   - component: {fileID: 524892977}
   - component: {fileID: 524892976}
   - component: {fileID: 524892975}
+  - component: {fileID: 524892978}
   m_Layer: 5
   m_Name: Try again
   m_TagString: Untagged
@@ -379,7 +380,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 524892976}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 524892978}
+        m_TargetAssemblyTypeName: restart, Assembly-CSharp
+        m_MethodName: LoadFirstScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &524892976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -418,6 +431,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 524892973}
   m_CullTransparentMesh: 1
+--- !u!114 &524892978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524892973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ab47a28ecaf1480081b98773000bce1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &730370665
 GameObject:
   m_ObjectHideFlags: 0
@@ -551,7 +576,6 @@ GameObject:
   - component: {fileID: 796012858}
   - component: {fileID: 796012857}
   - component: {fileID: 796012861}
-  - component: {fileID: 796012860}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -633,18 +657,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &796012860
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 796012856}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ab47a28ecaf1480081b98773000bce1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &796012861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -950,9 +962,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'You did not find Waldo ...
+  m_text: 'did you find him?
 
-'
+    it doesn''t matter ...
+
+    you have already failed'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
