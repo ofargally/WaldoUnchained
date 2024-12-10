@@ -1470,7 +1470,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1357644609}
-  - component: {fileID: 1357644612}
   - component: {fileID: 1357644611}
   - component: {fileID: 1357644610}
   - component: {fileID: 1357644613}
@@ -1490,7 +1489,7 @@ Transform:
   m_GameObject: {fileID: 1357644608}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.2773438, y: -0.67, z: 24.846899}
+  m_LocalPosition: {x: 4.2773438, y: -1.74, z: 24.846899}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1533,33 +1532,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyHP: 5
---- !u!54 &1357644612
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1357644608}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 112
-  m_CollisionDetection: 0
 --- !u!114 &1357644613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2597,27 +2569,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyHP: 5
---- !u!135 &1761750075092972489
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5082884813044946899}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1939733651401093662
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2637,7 +2588,6 @@ GameObject:
   - component: {fileID: 9165320312077491495}
   - component: {fileID: 94605172479413640}
   - component: {fileID: 6582451585626138919}
-  - component: {fileID: 1761750075092972489}
   m_Layer: 0
   m_Name: monsterHead
   m_TagString: Untagged
