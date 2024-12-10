@@ -14,5 +14,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/doodleJump.unity
     guid: e76250def4ac14cc59fe2d12a52ad88a
+  - enabled: 1
+    path: Assets/Scenes/die.unity
+    guid: 90f6c2bb6501b4f14a610c52c12e4e13
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
