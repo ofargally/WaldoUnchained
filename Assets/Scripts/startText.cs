@@ -8,6 +8,7 @@ public class startText : MonoBehaviour
 {
     public GameObject[] texts;
     public int totalTexts;
+    public float fasterTime;
 
     public float timeInterval = 2f;
     public float timeCounter = 0f;
@@ -25,7 +26,7 @@ public class startText : MonoBehaviour
         timeCounter += Time.deltaTime;
         if(currentText == 2)
         {
-            timeInterval = 1f;
+            timeInterval = fasterTime;
         }
         if (timeCounter > timeInterval && currentText < totalTexts)
         {
