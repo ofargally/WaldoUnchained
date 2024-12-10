@@ -22,6 +22,8 @@ public class GlobalReferences : MonoBehaviour
         else
         {
             Instance = this;
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
         }
     }
 }

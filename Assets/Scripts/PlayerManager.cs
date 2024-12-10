@@ -3,14 +3,16 @@ using System.Collections;
 
 public class PlayerManager : MonoBehaviour
 {
-    public int MaxHP, PlayerHP = 10;
+    public int MaxHP = 10;
     public bool PlayerWeaponMode = true;
+    private int PlayerHP;
     void Start()
     {
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
-
+        //Cursor.visible = false;
+        //Cursor.lockState = CursorLockMode.Locked;
+        PlayerHP = MaxHP;
     }
+
     void Update()
     {
         //Activate Or Deactivate Weapon Mode
@@ -18,13 +20,14 @@ public class PlayerManager : MonoBehaviour
         if (PlayerHP <= 0)
         {
             Debug.Log("PLAYER LOST!");
-            RestartScene();
+            Die();
         }
         if (GlobalReferences.Instance.HealthDisplay != null)
         {
-            GlobalReferences.Instance.HealthDisplay.text = $"{PlayerHP}/{MaxHP}";
+            GlobalReferences.Instance.HealthDisplay.text = $"HP: {PlayerHP}/{MaxHP}";
         }
     }
+
     public void TakeDamage(int damage)
     {
         PlayerHP -= damage;
@@ -34,18 +37,35 @@ public class PlayerManager : MonoBehaviour
     public void Die()
     {
         Debug.Log("PLAYER DEATH");
-        RestartScene();
+        LoadDeathScene();
     }
 
     void RestartScene()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(
+            UnityEngine.SceneManagement.SceneManager.GetActiveScene().name
+        );
     }
+
+    void LoadDeathScene()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+        UnityEngine.SceneManagement.SceneManager.LoadScene(3); // Death scene
+    }
+
     void SwitchWeaponMode()
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
             PlayerWeaponMode = !PlayerWeaponMode;
         }
+    }
+
+    public void Win()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+        UnityEngine.SceneManagement.SceneManager.LoadScene(4); // Win scene
     }
 }

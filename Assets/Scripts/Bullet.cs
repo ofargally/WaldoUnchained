@@ -4,7 +4,10 @@ public class Bullet : MonoBehaviour
 {
     private void OnCollisionEnter(Collision ObjectHit)
     {
-        CreateBulletImpactEffect(ObjectHit);
+        if (ObjectHit.gameObject.CompareTag("Ground"))
+        {
+            CreateBulletImpactEffect(ObjectHit);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -14,13 +17,10 @@ public class Bullet : MonoBehaviour
             Debug.Log("PLAYER HIT BY BULLET!");
             GlobalReferences.Instance.playerManager.TakeDamage(1);
         }
-        else
-        {
-            CreateBulletImpactEffect(other);
-        }
 
         if (other.gameObject.CompareTag("Enemy"))
         {
+            CreateBulletImpactEffect(other);
             Debug.Log("Hit enemy of name: " + other.gameObject.name);
             EnemyManager enemyManager = other.gameObject.GetComponent<EnemyManager>();
             if (enemyManager != null)

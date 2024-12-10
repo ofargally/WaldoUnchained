@@ -98,7 +98,7 @@ public class WeaponShoot : MonoBehaviour
         // Update Bullets UI
         if (GlobalReferences.Instance.AmmoDisplay != null)
         {
-            GlobalReferences.Instance.AmmoDisplay.text = $"{bulletsLeft / bulletsPerBurst}/{magazineSize / bulletsPerBurst}";
+            GlobalReferences.Instance.AmmoDisplay.text = $"Bullets: {bulletsLeft / bulletsPerBurst}/{magazineSize / bulletsPerBurst}";
         }
     }
     private void Fire()

@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - Ground
   - bad
+  - WALDO
   layers:
   - Default
   - TransparentFX
@@ -49,3 +50,5 @@ TagManager:
   - Ground
   - Player
   - Layer 3
+  - NoMove
+  - Layer 5

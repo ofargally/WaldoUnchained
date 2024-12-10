@@ -19,7 +19,7 @@ public class EnemyAI : MonoBehaviour
     public float timeBetweenChecks = 0.5f; // How often we check states
     public Transform[] patrolPoints;
     private int currentPatrolIndex = 0;
-
+    public bool enemyDisabled;
     // State checks
     private float nextCheckTime = 0f;
 
@@ -34,6 +34,7 @@ public class EnemyAI : MonoBehaviour
 
     void Update()
     {
+        if (enemyDisabled) return;
         // Check states periodically to avoid expensive operations every frame
         if (Time.time >= nextCheckTime)
         {
