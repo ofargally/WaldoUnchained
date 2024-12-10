@@ -1,2 +1,2 @@
-# CLIMB
-Climb the infitie tower, jump, dodge, hide, and defeat enemies. Find Waldo if you can!
+# Waldo Unchained
+A Waldo-core immersive gameplay. Shoot your way through enemies to FIND WALDO
