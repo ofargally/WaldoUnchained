@@ -14,7 +14,7 @@ public class WeaponShoot : MonoBehaviour
     bool allowReset = true;
 
     //Burst
-    public int burstBulletsLeft;
+    private int burstBulletsLeft;
     public int bulletsPerBurst = 3;
 
     //Spread
@@ -33,7 +33,7 @@ public class WeaponShoot : MonoBehaviour
     // Loading Weapon
     public float reloadTime;
     public int magazineSize;
-    public int bulletsLeft;
+    private int bulletsLeft;
     public bool isReloading;
     // Shootingmode
     public enum ShootingMode
@@ -57,7 +57,7 @@ public class WeaponShoot : MonoBehaviour
     void Update()
     {
         //If weapon mode is not activated, we return
-        if (!GlobalReferences.Instance.PlayerWeaponMode)
+        if (!GlobalReferences.Instance.playerManager.PlayerWeaponMode)
         {
             return;
         }

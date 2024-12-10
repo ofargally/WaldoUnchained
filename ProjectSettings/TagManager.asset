@@ -14,7 +14,7 @@ TagManager:
   - Ground
   - Water
   - UI
-  - 
+  - Player
   - 
   - 
   - 
@@ -47,3 +47,5 @@ TagManager:
   m_RenderingLayers:
   - Default
   - Ground
+  - Player
+  - Layer 3

@@ -11,7 +11,8 @@ public class GlobalReferences : MonoBehaviour
     }
     public GameObject bulletImpactEffectPrefab;
     public TextMeshProUGUI AmmoDisplay;
-    public bool PlayerWeaponMode = false;
+    public TextMeshProUGUI HealthDisplay;
+    public PlayerManager playerManager;
     private void Awake()
     {
         if (Instance != null && Instance != this)

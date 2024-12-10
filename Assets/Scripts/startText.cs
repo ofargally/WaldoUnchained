@@ -24,7 +24,7 @@ public class startText : MonoBehaviour
     {
 
         timeCounter += Time.deltaTime;
-        if(currentText == 2)
+        if (currentText == 2)
         {
             timeInterval = fasterTime;
         }
