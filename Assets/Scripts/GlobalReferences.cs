@@ -9,6 +9,7 @@ public class GlobalReferences : MonoBehaviour
         get;
         set;
     }
+    public UnityEngine.UI.Image bulletImage;
     public GameObject bulletImpactEffectPrefab;
     public TextMeshProUGUI AmmoDisplay;
     public TextMeshProUGUI HealthDisplay;
@@ -25,5 +26,16 @@ public class GlobalReferences : MonoBehaviour
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
         }
+    }
+    public void SetBulletImageColorRedTemporary()
+    {
+        StartCoroutine(ChangeColorRoutine());
+    }
+
+    private IEnumerator ChangeColorRoutine()
+    {
+        bulletImage.color = Color.red;
+        yield return new WaitForSeconds(0.5f);
+        bulletImage.color = Color.white;
     }
 }

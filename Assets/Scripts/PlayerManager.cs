@@ -6,6 +6,10 @@ public class PlayerManager : MonoBehaviour
     public int MaxHP = 10;
     public bool PlayerWeaponMode = true;
     private int PlayerHP;
+    public HitFlashImageController hitFlashController;
+    public CameraShake cameraShake;
+    public float shakeDuration = 0.1f;
+    public float shakeMagnitude = 0.1f;
     void Start()
     {
         //Cursor.visible = false;
@@ -28,10 +32,23 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(int damage, Vector3 hitpoint)
     {
         PlayerHP -= damage;
+        TriggerHitEffect(hitpoint);
         Debug.Log("PLAYER HP:" + PlayerHP);
+    }
+    void TriggerHitEffect(Vector3 hitPoint)
+    {
+        if (hitFlashController != null)
+        {
+            hitFlashController.TriggerFlash();
+        }
+        if (cameraShake != null)
+        {
+            StartCoroutine(cameraShake.Shake(shakeDuration, shakeMagnitude));
+        }
+
     }
 
     public void Die()

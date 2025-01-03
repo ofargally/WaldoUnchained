@@ -24,7 +24,7 @@ public class WeaponShoot : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform bulletSpawn;
     public float bulletSpeed = 30.0f;
-    public float bulletLife = 3.0f;
+    public float bulletLife = 1.0f;
 
     public GameObject muzzleEffect;
 

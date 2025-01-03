@@ -7,6 +7,7 @@ public class Bullet : MonoBehaviour
         if (ObjectHit.gameObject.CompareTag("Ground"))
         {
             CreateBulletImpactEffect(ObjectHit);
+            Destroy(gameObject);
         }
     }
 
@@ -15,12 +16,14 @@ public class Bullet : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             Debug.Log("PLAYER HIT BY BULLET!");
-            GlobalReferences.Instance.playerManager.TakeDamage(1);
+            Vector3 hitPoint = other.ClosestPoint(transform.position);
+            GlobalReferences.Instance.playerManager.TakeDamage(1, hitPoint);
         }
 
-        if (other.gameObject.CompareTag("Enemy")||other.gameObject.CompareTag("WALDO"))
+        if (other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("WALDO"))
         {
             CreateBulletImpactEffect(other);
+            GlobalReferences.Instance.SetBulletImageColorRedTemporary();
             Debug.Log("Hit enemy of name: " + other.gameObject.name);
             EnemyManager enemyManager = other.gameObject.GetComponent<EnemyManager>();
             if (enemyManager != null)
@@ -31,7 +34,6 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
     private void CreateBulletImpactEffect(Collision ObjectHit)
     {
         ContactPoint contact = ObjectHit.contacts[0];
